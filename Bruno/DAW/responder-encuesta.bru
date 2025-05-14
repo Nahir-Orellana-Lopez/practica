@@ -1,0 +1,38 @@
+meta {
+  name: responder-encuesta
+  type: http
+  seq: 4
+}
+
+post {
+  url: {{API_URL}}/v1/respuestas/:idEncuesta
+  body: json
+  auth: inherit
+}
+
+params:path {
+  idEncuesta: 1
+}
+
+body:json {
+  {
+    "respuestasAbiertas": [
+      {
+        "pregunta": {"id": 1},
+        "texto": "Caótico"
+      }
+    ],
+    "respuestasOpciones": [
+      {
+        "opcion":{"id": 1} 
+      },
+      {
+        "opcion":{"id": 3}
+      },
+      {
+        "opcion":{"id": 4}
+      }
+    ]
+  }
+  
+}

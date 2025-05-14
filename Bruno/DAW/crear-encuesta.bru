@@ -1,0 +1,62 @@
+meta {
+  name: crear-encuesta
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{API_URL}}/v1/encuestas
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "nombre": "Censo 2025",
+    "preguntas": [
+      {
+        "numero": 0,
+        "texto": "¿Cómo describirias el ambiente en el aula?",
+        "tipo": "ABIERTA"
+      },
+      {
+        "numero": 1,
+        "texto": "¿Sos titular?",
+        "tipo": "OPCION_MULTIPLE_SELECCION_SIMPLE",
+        "opciones": [
+          {
+            "texto": "SI",
+            "numero": 0
+          },
+          {
+            "texto": "NO",
+            "numero": 1
+          }
+        ]
+      },
+      {
+        "numero": 1,
+        "texto": "¿En que materias notas que hay más problemas?",
+        "tipo": "OPCION_MULTIPLE_SELECCION_MULTIPLE",
+        "opciones": [
+          {
+            "texto": "Matemática",
+            "numero": 0
+          },
+          {
+            "texto": "Lengua",
+            "numero": 1
+          },
+          {
+            "texto": "Inglés",
+            "numero": 2
+          },
+          {
+            "texto": "Otras",
+            "numero": 3
+          }
+        ]
+      }
+    ]
+  }
+}

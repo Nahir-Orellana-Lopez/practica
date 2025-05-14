@@ -1,0 +1,20 @@
+meta {
+  name: obtener-encuesta-respuesta
+  type: http
+  seq: 5
+}
+
+get {
+  url: {{API_URL}}/v1/encuestas/:id?codigo=4e707a39-6116-4815-93f1-11013e3d5600&tipo=RESULTADOS
+  body: none
+  auth: inherit
+}
+
+params:query {
+  codigo: 4e707a39-6116-4815-93f1-11013e3d5600
+  tipo: RESULTADOS
+}
+
+params:path {
+  id: 1
+}
