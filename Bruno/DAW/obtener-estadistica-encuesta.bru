@@ -1,0 +1,19 @@
+meta {
+  name: obtener-estadistica-encuesta
+  type: http
+  seq: 6
+}
+
+get {
+  url: {{API_URL}}/v1/encuestas/estadisticas/:id?codigo=4e707a39-6116-4815-93f1-11013e3d5600
+  body: none
+  auth: inherit
+}
+
+params:query {
+  codigo: 4e707a39-6116-4815-93f1-11013e3d5600
+}
+
+params:path {
+  id: 1
+}
