@@ -15,7 +15,7 @@ import { Routes } from '@angular/router';
 
 export const routes: Routes = [
   {
-    path: 'estadisticas',
+    path: 'estadisticas/:id',
     loadComponent: () =>
       import('./components/estadisticas/estadisticas.component').then(
         (m) => m.EstadisticasComponent,

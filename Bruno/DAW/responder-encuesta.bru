@@ -11,28 +11,39 @@ post {
 }
 
 params:path {
-  idEncuesta: 1
+  idEncuesta: 2
 }
 
 body:json {
   {
     "respuestasAbiertas": [
       {
-        "pregunta": {"id": 1},
-        "texto": "Caótico"
+        "pregunta": {"id": 4},
+        "texto": "Me gusta dormir"
+      },
+      {
+        "pregunta": {"id": 7},
+        "texto": "Dormiria todo el día"
       }
     ],
     "respuestasOpciones": [
       {
-        "opcion":{"id": 2} 
+        "opcion":{"id": 7} 
       },
       {
-        "opcion":{"id": 4}
+        "opcion":{"id": 9}
       },
       {
-        "opcion":{"id": 6}
+        "opcion":{"id": 10}
+      },
+       {
+        "opcion":{"id": 11}
+      },
+      {
+        "opcion":{"id": 12}
       }
     ]
   }
+  
   
 }

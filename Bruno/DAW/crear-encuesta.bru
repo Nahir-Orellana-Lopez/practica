@@ -12,16 +12,16 @@ post {
 
 body:json {
   {
-    "nombre": "Censo 2025",
+    "nombre": "Clima",
     "preguntas": [
       {
         "numero": 0,
-        "texto": "¿Cómo describirias el ambiente en el aula?",
+        "texto": "¿Qué haces en días lluviosos?",
         "tipo": "ABIERTA"
       },
       {
         "numero": 1,
-        "texto": "¿Sos titular?",
+        "texto": "¿Te gustan las tortas fritas?",
         "tipo": "OPCION_MULTIPLE_SELECCION_SIMPLE",
         "opciones": [
           {
@@ -36,19 +36,19 @@ body:json {
       },
       {
         "numero": 2,
-        "texto": "¿En que materias notas que hay más problemas?",
+        "texto": "¿Cuáles pensas que son las causas del cambio climático?",
         "tipo": "OPCION_MULTIPLE_SELECCION_MULTIPLE",
         "opciones": [
           {
-            "texto": "Matemática",
+            "texto": "Deforestación",
             "numero": 0
           },
           {
-            "texto": "Lengua",
+            "texto": "Combustibles fósiles",
             "numero": 1
           },
           {
-            "texto": "Inglés",
+            "texto": "Generación de residuos",
             "numero": 2
           },
           {
@@ -56,6 +56,11 @@ body:json {
             "numero": 3
           }
         ]
+      },
+       {
+        "numero": 3,
+        "texto": "¿Cómo sería un domingo perfecto para vos?",
+        "tipo": "ABIERTA"
       }
     ]
   }
