@@ -8,6 +8,7 @@ import { InputTextModule } from 'primeng/inputtext';
 import { AccordionModule } from 'primeng/accordion';
 import { FieldsetModule } from 'primeng/fieldset';
 import { ChartModule } from 'primeng/chart';
+import { ScrollPanelModule } from 'primeng/scrollpanel';
 @Component({
   selector: 'app-preguntas',
   standalone: true,
@@ -24,6 +25,7 @@ import { ChartModule } from 'primeng/chart';
     AccordionModule,
     FieldsetModule,
     ChartModule,
+    ScrollPanelModule,
   ],
 })
 export class PreguntasComponent {
