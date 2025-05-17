@@ -1,0 +1,67 @@
+<div class="p-grid p-dir-col preguntas">
+  <p-card *ngFor="let pregunta of preguntas">
+    <p-fieldset legend="Pregunta {{ pregunta.numero + 1 }}">
+      <p-accordion [activeIndex]="0">
+        <p-accordionTab header="{{ pregunta.texto }}">
+          <div class="p-card-content">
+            <!-- Pregunta abierta -->
+            <div *ngIf="pregunta.tipo === 'ABIERTA'">
+              <!-- <input
+                type="text"
+                pInputText
+                [(ngModel)]="respuestas[pregunta.id]"
+                placeholder="Escribe tu respuesta"
+              /> -->
+
+              <p *ngFor="let respuesta of pregunta.respuestasAbiertas">
+                {{ respuesta.texto }}
+              </p>
+            </div>
+
+            <!-- Selección simple -->
+            <div *ngIf="pregunta.tipo === 'OPCION_MULTIPLE_SELECCION_SIMPLE'">
+              <div class="flex justify-content-center">
+                <p-chart
+                  type="doughnut"
+                  [data]="getData(pregunta)"
+                  [options]="options"
+                />
+              </div>
+              <!-- <div
+                *ngFor="let opcion of pregunta.opciones"
+                class="p-field-radiobutton"
+              >
+                <p-radioButton
+                  name="pregunta{{ pregunta.id }}"
+                  [value]="opcion.texto"
+                  [(ngModel)]="respuestas[pregunta.id]"
+                />
+                <label>{{ opcion.texto }}</label>
+              </div> -->
+            </div>
+
+            <!-- Selección múltiple -->
+            <div *ngIf="pregunta.tipo === 'OPCION_MULTIPLE_SELECCION_MULTIPLE'">
+              <p-chart
+                type="bar"
+                [data]="getData(pregunta)"
+                [options]="options"
+              />
+              <!-- <div
+                *ngFor="let opcion of pregunta.opciones"
+                class="p-field-checkbox"
+              >
+                <p-checkbox
+                  [value]="opcion.texto"
+                  [(ngModel)]="respuestas[pregunta.id]"
+                  [binary]="false"
+                />
+                <label>{{ opcion.texto }}</label>
+              </div> -->
+            </div>
+          </div>
+        </p-accordionTab>
+      </p-accordion>
+    </p-fieldset>
+  </p-card>
+</div>

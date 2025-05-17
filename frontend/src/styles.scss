@@ -1,0 +1,23 @@
+@import "primeicons/primeicons.css";
+// @import "primeng/resources/primeng.css";
+
+:root {
+}
+
+body {
+  margin: 0;
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+}
+
+html {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.mi-switch .p-toggleswitch-handle {
+  background: url("assets/logo.svg") !important;
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+}
