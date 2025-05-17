@@ -19,6 +19,11 @@ export class RespuestaOpcion {
     return this.opcion?.id;
   }
 
+  @Expose()
+  get preguntaId(): number {
+    return this.opcion?.pregunta?.id;
+  }
+
   @ManyToOne(() => Respuesta, (respuesta) => respuesta.respuestasOpciones)
   @JoinColumn({ name: 'id_respuesta' })
   @Exclude()
