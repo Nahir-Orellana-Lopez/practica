@@ -32,6 +32,7 @@ export class PreguntasComponent {
   @Input() preguntas: any[] = [];
   respuestas: any = {};
 
+  @Input() nombre: string = '';
   options: any;
 
   ngOnInit() {

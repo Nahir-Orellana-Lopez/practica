@@ -13,6 +13,7 @@ import { ActivatedRoute } from '@angular/router';
 export class EstadisticasComponent implements OnInit {
   datos: any;
   preguntas: any;
+  nombre: string = 'Encuesta';
 
   constructor(
     private estadisticasService: EstadisticasService,
@@ -27,6 +28,7 @@ export class EstadisticasComponent implements OnInit {
       .subscribe({
         next: (res) => {
           this.datos = res;
+          this.nombre = res.nombre;
           this.preguntas = res.preguntas;
           this.preguntas.sort(
             (a: { numero: number }, b: { numero: number }) =>
